@@ -18,6 +18,7 @@ class CreateClassroomTrainersTable extends Migration
          $table->integer('classroom_course_id')->nullable();
          $table->string('image')->nullable();
          $table->string('name');
+         $table->string('signature')->nullable();
          $table->string('designation')->nullable();
          $table->string('facebook_profile')->nullable();
          $table->string('linkdin_profile')->nullable();

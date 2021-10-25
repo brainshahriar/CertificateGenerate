@@ -160,14 +160,14 @@
 
                 <div class="instructor-bx">
                   <div class="instructor-author">
-                    <img src="{{asset('storage/trainer/'.$item->image)}}" alt="">
+                    <img src="{{asset($item->image)}}" alt="">
                   </div>
                   <div class="instructor-info">
                     <h6>{{$item->name}}</h6>
                     <span>{{ $item->designation }}</span>
                     <ul class="list-inline m-tb10">
-                      <li><a href="{{ $item->facebook_profile }}" class="btn sharp-sm facebook"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="{{ $item->linkdin_profile }}" class="btn sharp-sm linkedin"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="{{ $item->facebook_profile }}" class="btn sharp-sm facebook"><i class="fab fa-facebook"></i></a></li>
+                      <li><a href="{{ $item->linkdin_profile }}" class="btn sharp-sm linkedin"><i class="fab fa-linkedin"></i></a></li>
                     </ul>
                     <p class="m-b0">{!! $item->biography !!}</p>
                   </div>

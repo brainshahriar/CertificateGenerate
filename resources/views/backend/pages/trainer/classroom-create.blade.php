@@ -35,7 +35,7 @@
                 <th>Course</th>
                 <th class="wd-10">Designation</th>
                 <th>Fb Link</th>
-                <th>Lindin Link</th>
+                <th>Lindin Link</th> 
                 <th>Biography</th>
                 <th>Image</th>
                 <th>Actions</th>
@@ -96,8 +96,6 @@
 
                 </td>
                  @include('backend.modals.classroomtrainereditmodal')
-
-
               </tr>
               @endforeach
             </tbody>

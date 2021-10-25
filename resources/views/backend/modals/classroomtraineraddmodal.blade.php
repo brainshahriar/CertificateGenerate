@@ -55,7 +55,12 @@
               </div>
               <div class="form-group">
                   <label for="exampleFormControlFile1">Image</label>
-                    <input  type="file" name="file" class="form-control-file" id="image" onchange="previewImage(this)">
+                    <input  type="file" name="image" class="form-control-file" id="image" onchange="previewImage(this)">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-control-label">Signature: <span class="tx-danger">*</span></label>
+                    <input class="form-control" type="file" name="signature"  onchange="Signature(this)" data-validation="required">
+                  <img src="" id="mainThmb">
                   </div>
 
                   <div class="modal-footer">
@@ -71,3 +76,16 @@
       $('#biography').summernote();
     });
     </script>
+    <script src="{{asset('backend')}}/lib/jquerysubsubcategory/jquery-2.2.4.min.js"></script>
+    <script>
+        function Signature(input){
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $('#mainThmb').attr('src',e.target.result).width(80)
+                      .height(80);
+            };
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+      </script>

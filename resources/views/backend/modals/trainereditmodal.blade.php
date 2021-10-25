@@ -12,7 +12,7 @@
             @csrf
             <input type="hidden" name="id" value="{{$row->id}}">
             <input type="hidden" name="old_image" value="{{ $row->image }}">
-            <input type="hidden" name="old_image1" value="{{ $row->signature }}">
+            <input type="hidden" name="old_image1" value="{{ $row->signature }}"> 
 
               <div class="form-group">
                 <label for="classroom_course_title" >Name</label>
