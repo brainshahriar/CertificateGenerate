@@ -22,7 +22,7 @@ class CourseController extends Controller
   public function Manage()
   {
     $trainer= Trainer::all();
-    $course_details= CourseOverview::all();
+    $course_details= CourseOverview::all(); 
     $courses= Course::all();
     $course_categories= CourseCategory::all();
     $main_categories= MainCategory::all();
@@ -40,6 +40,9 @@ class CourseController extends Controller
 
 
     $course_title=$request->course_title;
+
+    $elearning_slug = strtolower(str_replace(' ','-',$request->course_title));
+
     $regular_price=$request->regular_price;
     $sale_price=$request->sale_price;
 
@@ -68,6 +71,9 @@ class CourseController extends Controller
     $course->course_category_id =$course_category_id;
 
     $course->course_title=$course_title;
+
+    $course->elearning_slug=$elearning_slug;
+
     $course->regular_price=$regular_price;
     $course->sale_price=$sale_price;
 
@@ -302,7 +308,7 @@ class CourseController extends Controller
 
 
 
-  public function course_details_frontend($id)
+  public function course_details_frontend($id) 
   {
 
     $course_categories= CourseCategory::all();
@@ -320,8 +326,6 @@ class CourseController extends Controller
     $rating = CourseReview::where('course_id',$id)->where('status','approve')->avg('rating');
     $avgRating = number_format($rating,1);
     $trainer= Trainer::where('course_id',$id)->get();
-
-
 
     return view('/backend/pages/courses.course_details_index',compact('course_details','main_categories','course_categories','course','enrolled','courseReview','avgRating','trainer'));
   }
