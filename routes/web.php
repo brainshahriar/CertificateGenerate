@@ -156,7 +156,7 @@ Route::get('admin/home/courses/course_overviews/{id}',[CourseController::class,'
 Route::post('admin/home/courses/course_details/store',[CourseController::class,'StoreCourseDetails'])->name('store-course-details')->middleware('is_admin');
 Route::post('admin/home/courses/course_details/update',[CourseController::class,'UpdateCourseDetails'])->name('update-course-details')->middleware('is_admin');
 
-Route::get('home/course_details/{id}',[CourseController::class,'course_details_frontend']);
+Route::get('home/course_details/{id}/{slug}',[CourseController::class,'course_details_frontend']);
 Route::get('admin/home/course_details/sections/{id}',[CourseController::class,'Section'])->middleware('is_admin');
 Route::post('admin/home/courses/course_details/sections/store',[CourseController::class,'StoreSection'])->name('store-section')->middleware('is_admin');
 Route::get('admin/home/course_details/sections/edit/{id}',[CourseController::class,'editSection'])->middleware('is_admin');

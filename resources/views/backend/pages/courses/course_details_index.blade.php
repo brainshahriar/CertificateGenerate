@@ -99,7 +99,7 @@
                 </div>
               </a>
               @if(count($course->sections) > 0) 
-              @foreach($course->sections as $section) 
+              @foreach($course->sections as $section)
               @if(count($section->lessons) > 0)
               @foreach($section->lessons as $lesson)
               @if($lesson->preview==1)

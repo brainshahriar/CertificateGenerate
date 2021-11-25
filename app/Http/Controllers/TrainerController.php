@@ -204,7 +204,7 @@ class TrainerController extends Controller
      ClassroomTrainer::findOrFail($trainer_id)->update([
         'name' => $request->name,
         'classroom_course_id' => $request->classroom_course_id,
-        'designation' => $request->designation,
+        'designation' => $request->designation, 
         'facebook_profile' => $request->facebook_profile,
         'linkdin_profile' => $request->linkdin_profile,
         'biography' => $request->biography,

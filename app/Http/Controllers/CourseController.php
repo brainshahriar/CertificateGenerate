@@ -50,6 +50,7 @@ class CourseController extends Controller
     $preview_id=$request->preview_id;
     $video_type=$request->video_type;
     $accredation_name=$request->accredation_name;
+    
 
 
     $course_image =$request->file('file');
@@ -308,7 +309,7 @@ class CourseController extends Controller
 
 
 
-  public function course_details_frontend($id) 
+  public function course_details_frontend($id,$slug) 
   {
 
     $course_categories= CourseCategory::all();

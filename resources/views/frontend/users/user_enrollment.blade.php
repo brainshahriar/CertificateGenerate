@@ -95,7 +95,6 @@
                                                 <a class="btn btn-success align-center" data-toggle="modal" data-target="#SubmitEvolution" href="#">Submit To Download Certificate</a>
                                                   @include('frontend.modals.submitevolutionmodal')
                                                 @endif
-
                                             </div>
                                         </div>
                                     </div>

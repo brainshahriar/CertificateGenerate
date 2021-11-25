@@ -32,7 +32,7 @@
         <!-- Your Faq -->
         <div class="section-area section-sp1">
             <div class="container">
-    <!--  <div class="row">
+     <div class="row">
         <div class="col-lg-8 col-md-12">
           <div class="heading-bx left">
             <h2 class="m-b10 title-head">Asked <span> Questions</span></h2>
@@ -202,7 +202,7 @@
             </div>
           </form>
         </div>
-      </div> -->
+      </div>
 
             </div>
         </div>

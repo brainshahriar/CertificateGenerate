@@ -14,7 +14,7 @@
                 <label for="classroom_course_title" >Name</label>
                 <input data-validation="required" type="text" class="form-control" name="name" aria-describedby="name" placeholder="Enter Name">
 
-              </div>
+              </div> 
 
               <div class="form-group">
                 <label for="custom select">Select Course</label>
